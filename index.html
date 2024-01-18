@@ -21,6 +21,33 @@
 
         <h2>SONGS LIST</h2>
         <div id="songsList"></div>
+
+        <script>
+            let songCounter = 1;
+
+function addSong() {
+    const songName = document.getElementById("songName").value;
+    const singerName = document.getElementById("singerName").value;
+    const releaseDate = document.getElementById("releaseDate").value;
+    if (songName && singerName && releaseDate) {
+                const songCard = document.createElement("div");
+                songCard.classList.add("song-card");
+                songCard.textContent = `${songCounter}: ${songName} by ${singerName}, Released on ${releaseDate}`;
+
+                document.getElementById("songsList").appendChild(songCard);
+
+               
+                songCounter++;
+
+                
+                document.getElementById("songName").value = '';
+                document.getElementById("singerName").value = '';
+                document.getElementById("releaseDate").value = '';
+            } else {
+                alert("Please fill in all the fields");
+            }
+        }
+        </script>
 </div> 
 </body>
 </html>
