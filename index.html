@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Information</title>
+   
+</head>
+<body>
+<div>
+    <h1>Song Information</h1>
+    <label for="songName">Song Name:</label>
+    <input type="text" id="songName" required>
+
+    <label for="singerName">Singer:</label>
+        <input type="text" id="singerName" required>
+
+        <label for="releaseDate">Release Date:</label>
+        <input type="date" id="releaseDate" required>
+
+        <button type="button" onclick="addSong()">Add Song</button>
+
+        <h2>SONGS LIST</h2>
+        <div id="songsList"></div>
+</div> 
+</body>
+</html>
